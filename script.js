@@ -14,6 +14,12 @@ inputTwo.addEventListener("change", lowerCase);
 inputOne.addEventListener("change", upperCase);
 inputTwo.addEventListener("change", upperCase);
 
+inputOne.addEventListener("change", checkForNumbers);
+inputTwo.addEventListener("change", checkForNumbers);
+
+inputOne.addEventListener("change", characterLength);
+inputTwo.addEventListener("change", characterLength);
+
 function showPassword() {
   if (inputOne.type === "password") {
     inputOne.setAttribute("type", "text");
@@ -75,5 +81,38 @@ function upperCase() {
     upperCase.innerHTML = "Upper Case Letters ✅";
   } else {
     upperCase.innerHTML = "Upper Case Letters ❌";
+  }
+}
+
+function checkForNumbers() {
+  let regex = /\d/;
+  let numbers = document.querySelector("#contains-numbers");
+
+  if (regex.test(inputOne.value) === true) {
+    numbers.innerHTML = "Contains Numbers ✅";
+  } else {
+    numbers.innerHTML = "Contains Numbers ❌";
+  }
+
+  if (regex.test(inputTwo.value) === true) {
+    numbers.innerHTML = "Contains Numbers ✅";
+  } else {
+    numbers.innerHTML = "Contains Numbers ❌";
+  }
+}
+
+function characterLength() {
+  let character = document.querySelector("#character-length");
+
+  if (inputOne.value.length >= 10) {
+    character.innerHTML = "At least 10 characters long ✅";
+  } else {
+    character.innerHTML = "At least 10 characters long ❌";
+  }
+
+  if (inputTwo.value.length >= 10) {
+    character.innerHTML = "At least 10 characters long ✅";
+  } else {
+    character.innerHTML = "At least 10 characters long ❌";
   }
 }
