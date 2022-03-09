@@ -4,8 +4,15 @@ let passwordBtn = document.querySelector("#password-btn");
 
 passwordBtn.addEventListener("click", showPassword);
 passwordBtn.addEventListener("click", changeButton);
+
 inputOne.addEventListener("change", equalPasswords);
 inputTwo.addEventListener("change", equalPasswords);
+
+inputOne.addEventListener("change", lowerCase);
+inputTwo.addEventListener("change", lowerCase);
+
+inputOne.addEventListener("change", upperCase);
+inputTwo.addEventListener("change", upperCase);
 
 function showPassword() {
   if (inputOne.type === "password") {
@@ -36,5 +43,37 @@ function equalPasswords() {
     equal.innerHTML = "Passwords are equal ✅";
   } else {
     equal.innerHTML = "Passwords are not equal ❌";
+  }
+}
+
+function lowerCase() {
+  let lowerCase = document.querySelector("#lower-case-letters");
+
+  if (inputOne.value !== inputOne.value.toUpperCase()) {
+    lowerCase.innerHTML = "Lower Case Letters ✅";
+  } else {
+    lowerCase.innerHTML = "Lower Case Letters ❌";
+  }
+
+  if (inputTwo.value !== inputTwo.value.toUpperCase()) {
+    lowerCase.innerHTML = "Lower Case Letters ✅";
+  } else {
+    lowerCase.innerHTML = "Lower Case Letters ❌";
+  }
+}
+
+function upperCase() {
+  let upperCase = document.querySelector("#upper-case-letters");
+
+  if (inputOne.value !== inputOne.value.toLowerCase()) {
+    upperCase.innerHTML = "Upper Case Letters ✅";
+  } else {
+    upperCase.innerHTML = "Upper Case Letters ❌";
+  }
+
+  if (inputTwo.value !== inputTwo.value.toLowerCase()) {
+    upperCase.innerHTML = "Upper Case Letters ✅";
+  } else {
+    upperCase.innerHTML = "Upper Case Letters ❌";
   }
 }
