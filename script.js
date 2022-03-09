@@ -4,7 +4,8 @@ let passwordBtn = document.querySelector("#password-btn");
 
 passwordBtn.addEventListener("click", showPassword);
 passwordBtn.addEventListener("click", changeButton);
-passwordBtn.addEventListener("click", equalPasswords);
+inputOne.addEventListener("change", equalPasswords);
+inputTwo.addEventListener("change", equalPasswords);
 
 function showPassword() {
   if (inputOne.type === "password") {
@@ -29,19 +30,11 @@ function changeButton() {
 }
 
 function equalPasswords() {
+  let equal = document.querySelector("#equal");
+
   if (inputOne.value === inputTwo.value) {
-    let equal = document.createElement("div");
-    let equalText = document.createTextNode("Passwords are equal");
-    equal.appendChild(equalText);
-
-    let div = document.querySelector("#equal");
-    div.appendChild(equal);
+    equal.innerHTML = "Passwords are equal ✅";
   } else {
-    let equal = document.createElement("div");
-    let equalText = document.createTextNode("Passwords are not equal");
-    equal.appendChild(equalText);
-
-    let div = document.querySelector("#equal");
-    div.appendChild(equal);
+    equal.innerHTML = "Passwords are not equal ❌";
   }
 }
