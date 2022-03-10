@@ -25,14 +25,23 @@ h1 {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding-top: 4rem;
   padding-right: 22rem;
   gap: 1rem;
   font-family: "Open Sans", sans-serif;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.password-input {
+  margin: 0.2rem;
+  border: 2px solid black;
 }
 
 .password-button {
@@ -40,43 +49,25 @@ main {
   background-color: black;
   color: white;
   text-decoration: none;
-  padding-right: 2.5rem;
-  padding-left: 2.5rem;
+  padding-right: 2.8rem;
+  padding-left: 2.8rem;
+  margin-top: 0.2rem;
 }
 
-input {
-  border: 2px black;
-}
-/*
-body {
+.div-container1 {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 20rem;
+  border: 3rem greenyellow;
+}
+
+.div-container2 {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  border: 2px solid yellowgreen;
+  margin-left: 7rem;
+  gap: 1.5rem;
 }
-
-
-.password-1 {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  margin-right: 10rem;
-  margin-bottom: 10rem;
-  border: 2px solid black;
-}
-
-.password-2 {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-right: 20rem;
-  border: 2px solid yellowgreen;
-}
-
-.password-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-*/

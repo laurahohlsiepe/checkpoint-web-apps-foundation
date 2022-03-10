@@ -18,17 +18,34 @@
   </header>
   <body>
     <main>
-      <input type="password" type="text" id="input1" class="password-input" />
+      <div id="container" class="flex-container">
+        <div class="div-container1">
+          <input
+            type="password"
+            type="text"
+            id="input1"
+            class="password-input"
+          />
 
-      <input type="password" type="text" id="input2" class="password-input" />
+          <input
+            type="password"
+            type="text"
+            id="input2"
+            class="password-input"
+          />
 
-      <button id="password-btn" class="password-button">Show Passwords</button>
-      <div id="container">
-        <div id="equal">Passwords are equal ❌</div>
-        <div id="lower-case-letters">Lower Case Letters ❌</div>
-        <div id="upper-case-letters">Upper Case Letters ❌</div>
-        <div id="contains-numbers">Contains Numbers ❌</div>
-        <div id="character-length">At least 10 characters long ❌</div>
+          <button id="password-btn" class="password-button">
+            Show Passwords
+          </button>
+        </div>
+
+        <div class="div-container2">
+          <div id="equal">Passwords are equal ❌</div>
+          <div id="lower-case-letters">Lower Case Letters ❌</div>
+          <div id="upper-case-letters">Upper Case Letters ❌</div>
+          <div id="contains-numbers">Contains Numbers ❌</div>
+          <div id="character-length">At least 10 characters long ❌</div>
+        </div>
       </div>
     </main>
     <script src="script.js"></script>

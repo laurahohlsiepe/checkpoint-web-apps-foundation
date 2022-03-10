@@ -48,7 +48,7 @@ function equalPasswords() {
   if (inputOne.value === inputTwo.value) {
     equal.innerHTML = "Passwords are equal ✅";
   } else {
-    equal.innerHTML = "Passwords are not equal ❌";
+    equal.innerHTML = "Passwords are equal ❌";
   }
 }
 
