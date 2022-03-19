@@ -54,7 +54,7 @@ main {
   margin-top: 0.2rem;
 }
 
-.div-container1 {
+.password-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,7 +63,7 @@ main {
   border: 3rem greenyellow;
 }
 
-.div-container2 {
+.check-container {
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -19,7 +19,7 @@
   <body>
     <main>
       <div id="container" class="flex-container">
-        <div class="div-container1">
+        <div class="password-container">
           <input
             type="password"
             type="text"
@@ -39,12 +39,14 @@
           </button>
         </div>
 
-        <div class="div-container2">
-          <div id="equal">Passwords are equal ❌</div>
-          <div id="lower-case-letters">Lower Case Letters ❌</div>
-          <div id="upper-case-letters">Upper Case Letters ❌</div>
-          <div id="contains-numbers">Contains Numbers ❌</div>
-          <div id="character-length">At least 10 characters long ❌</div>
+        <div class="check-container">
+          <p>Passwords are equal <span id="equal">❌</span></p>
+          <p>Lower Case Letters <span id="lower-case-letters">❌</span></p>
+          <p>Upper Case Letters <span id="upper-case-letters">❌</span></p>
+          <p>Contains Numbers <span id="contains-numbers">❌</span></p>
+          <p>
+            At least 10 characters long <span id="character-length">❌</span>
+          </p>
         </div>
       </div>
     </main>
